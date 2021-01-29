@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  &__logo {
+    > img {
+      height: 25vh;
+    }
+    > h2 {
+      font-weight: 400;
+      font-size: $font-44;
+      margin: 3.7vh 0;
+    }
+  }
+
+  > p {
+    font-size: $font-xl;
+    text-align: center;
+    margin: 0 20%;
+    text-shadow: 0px 0px 10px rgba(black, 0.3);
+  }
+
+  > .botonCTA {
+    margin-top: 3.7vh;
+  }
+}

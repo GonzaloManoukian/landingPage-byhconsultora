@@ -1,0 +1,386 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.botonCTA {
+  font-family: inherit;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  height: 65px;
+  width: 340px;
+  background-color: #0c4c8a;
+  border: 1px solid #0c4c8a;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.card {
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cardBlue {
+  border: 1px solid #0c4c8a;
+  background-color: #0c4c8a;
+  color: white;
+}
+
+.cardTransp {
+  border: 2px solid #0c4c8a;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 25px;
+}
+
+.header {
+  position: fixed;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background-color: transparent;
+  z-index: 10;
+  width: 100%;
+}
+
+.header__logo > img {
+  height: 70px;
+  margin-left: 60px;
+  margin-right: 50px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.header__logo > h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  font-size: 1.125rem;
+}
+
+.header__logoScroll > img {
+  height: 55px;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.header__logoScroll > h2 {
+  color: white;
+}
+
+.headerScroll {
+  background-color: #0c4c8a;
+}
+
+.header__nav {
+  margin-right: 40px;
+  width: 650px;
+  height: 90px;
+}
+
+.header__nav > a {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.header__navScroll > a {
+  color: white;
+}
+
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+}
+
+.hero__logo > img {
+  height: 25vh;
+}
+
+.hero__logo > h2 {
+  font-weight: 400;
+  font-size: 2.75rem;
+  margin: 3.7vh 0;
+}
+
+.hero > p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 20%;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero > .botonCTA {
+  margin-top: 3.7vh;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.about {
+  text-align: center;
+  padding: 25vh 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about > p {
+  margin: 7.5% 0;
+  font-size: 1.25rem;
+}
+
+.servicios {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(../img/servicios.jpg);
+  background-size: cover;
+  background-position: center top;
+  text-align: center;
+  padding: 18vh 0;
+  margin: 0 auto;
+}
+
+.servicios > h2 {
+  font-size: 2rem;
+  margin-bottom: 9vh;
+}
+
+.servicios__row {
+  min-width: 1200px;
+  max-width: 1500px;
+  margin: 0 20px;
+}
+
+.servicios__rowCard {
+  width: 31%;
+  height: 750px;
+}
+
+.servicios__rowCard:hover {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.servicios__rowCard_contenido {
+  margin: 40px 50px 60px;
+}
+
+.servicios__rowCard_contenido > i {
+  padding: 0;
+  margin: 1vh 0;
+}
+
+.servicios__rowCard_contenido > h3 {
+  font-weight: 400;
+}
+
+.servicios__rowCard_contenido > span {
+  width: 50%;
+  border-bottom: 1px solid lightgray;
+}
+
+.servicios__rowCard_contenido > p {
+  padding-top: 1vh;
+}
+
+.servicios__rowCard_contenido > p:not(:last-child) {
+  padding-bottom: 1vh;
+}
+
+.planes {
+  text-align: center;
+  padding: 18vh 0;
+  margin: 0 auto;
+}
+
+.planes > h2 {
+  font-size: 2rem;
+  margin-bottom: 9vh;
+}
+
+.planes__row {
+  min-width: 1200px;
+  max-width: 1500px;
+  margin: 0 20px;
+}
+
+.planes__rowCard {
+  position: relative;
+  width: 32%;
+  padding: 40px 50px 60px;
+}
+
+.planes__rowCard > button {
+  position: absolute;
+  bottom: -32.5px;
+  width: 250px;
+}
+
+.planes__rowCard_contenido > h3 {
+  padding: 0 10px;
+}
+
+.trabajos {
+  padding-top: 80px;
+}
+
+.trabajos__rowSide {
+  width: 50%;
+}
+
+.trabajos__rowSideContenido {
+  padding: 50px 80px;
+  margin: auto 0;
+}
+
+.trabajos__rowSideContenido > h2 {
+  text-align: center;
+}
+
+.autoproteccion {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/autoproteccion.jpg);
+  background-size: cover;
+  background-position: left top;
+  min-height: 100vh;
+}
+
+.bioseguridad {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/bioseguridad.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.capacitaciones {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/capacitaciones.jpg);
+  background-size: cover;
+  background-position: left top;
+  min-height: 100vh;
+}
+
+.otrosServicios {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/otrosServicios.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.footer {
+  background-color: #0c4c8a;
+  padding: 120px 300px 120px 120px;
+}
+
+.footer__datos {
+  color: white;
+  line-height: 20px;
+  font-size: 1.5rem;
+}
+
+.footer__linksRedes a {
+  height: 50px;
+}
+
+.footer__linksRedes a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer__linksWhatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  -webkit-box-shadow: -2px 2px 20px black;
+          box-shadow: -2px 2px 20px black;
+}
+
+.footer__linksWhatsapp > img {
+  height: 50px;
+}
+
+.breakLine {
+  margin-top: 50px;
+}
+/*# sourceMappingURL=styles.css.map */

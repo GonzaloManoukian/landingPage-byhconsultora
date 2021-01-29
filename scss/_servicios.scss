@@ -1,0 +1,54 @@
+.servicios {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(../img/servicios.jpg);
+  background-size: cover;
+  background-position: center top;
+  text-align: center;
+  padding: 18vh 0;
+  margin: 0 auto;
+
+  > h2 {
+    font-size: $font-32;
+    margin-bottom: 9vh;
+  }
+  &__row {
+    min-width: 1200px;
+    max-width: 1500px;
+    margin: 0 20px;
+
+    &Card {
+      width: 31%;
+      height: 750px;
+
+      &:hover {
+        box-shadow: 0px 0px 30px rgba(black, 0.5);
+      }
+
+      &_contenido {
+        margin: 40px 50px 60px;
+
+        > i {
+          padding: 0;
+          margin: 1vh 0;
+        }
+
+        > h3 {
+          font-weight: 400;
+        }
+
+        > span {
+          width: 50%;
+          border-bottom: 1px solid lightgray;
+        }
+        > p {
+          padding-top: 1vh;
+          &:not(:last-child) {
+            padding-bottom: 1vh;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  transition: $trans-1s;
+  background-color: transparent;
+  z-index: 10;
+  width: 100%;
+  &__logo {
+    > img {
+      height: 70px;
+      margin-left: 60px;
+      margin-right: 50px;
+      filter: invert(100%);
+      transition: $trans-1s;
+    }
+    > h2 {
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: $trans-1s;
+      font-size: $font-md;
+    }
+
+    &Scroll {
+      > img {
+        height: 55px;
+        filter: none;
+      }
+      > h2 {
+        color: white;
+      }
+    }
+  }
+
+  &Scroll {
+    background-color: $color-blue;
+  }
+  &__nav {
+    margin-right: 40px;
+    width: 650px;
+    height: 90px;
+    > a {
+      text-transform: uppercase;
+      font-size: $font-lg;
+    }
+
+    &Scroll {
+      > a {
+        color: white;
+      }
+    }
+  }
+}

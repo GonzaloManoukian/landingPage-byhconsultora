@@ -1,0 +1,56 @@
+.trabajos {
+  padding-top: 80px;
+  &__row {
+    &Side {
+      width: 50%;
+      &Contenido {
+        padding: 50px 80px;
+        margin: auto 0;
+
+        > h2 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.autoproteccion {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/autoproteccion.jpg);
+  background-size: cover;
+  background-position: left top;
+  min-height: 100vh;
+}
+
+.bioseguridad {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/bioseguridad.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.capacitaciones {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/capacitaciones.jpg);
+  background-size: cover;
+  background-position: left top;
+  min-height: 100vh;
+}
+
+.otrosServicios {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(/img/otrosServicios.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}

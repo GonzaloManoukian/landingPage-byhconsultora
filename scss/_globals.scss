@@ -1,0 +1,78 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: $font-md;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex {
+  display: flex;
+
+  &-c {
+    flex-direction: column;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.botonCTA {
+  font-family: inherit;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  height: 65px;
+  width: 340px;
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.card {
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(black, 0.4);
+
+  &Blue {
+    border: 1px solid $color-blue;
+    background-color: $color-blue;
+    color: white;
+  }
+
+  &Transp {
+    border: 2px solid $color-blue;
+    box-shadow: none;
+    border-radius: 25px;
+  }
+}

@@ -1,0 +1,40 @@
+.footer {
+  background-color: $color-blue;
+  padding: 120px 300px 120px 120px;
+  &__datos {
+    color: white;
+    line-height: 20px;
+    font-size: $font-xl;
+  }
+
+  &__links {
+    &Redes {
+      a {
+        height: 50px;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &Whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      box-shadow: -2px 2px 20px black;
+
+      > img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+.breakLine {
+  margin-top: 50px;
+}

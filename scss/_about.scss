@@ -1,0 +1,16 @@
+h1 {
+  font-size: $font-32;
+}
+
+.about {
+  //   height: 100vh;
+  text-align: center;
+  padding: 25vh 0;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  > p {
+    margin: 7.5% 0;
+    font-size: $font-lg;
+  }
+}
