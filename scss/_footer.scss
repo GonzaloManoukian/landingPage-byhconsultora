@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-blue;
-  padding: 120px 300px 120px 120px;
+  padding: 120px 300px 50px 120px;
   &__datos {
     color: white;
     line-height: 20px;
@@ -19,17 +19,27 @@
 
     &Whatsapp {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
+      right: 30px;
+      bottom: 30px;
       background-color: white;
       border: 1px solid white;
       border-radius: 50%;
       height: 80px;
       width: 80px;
       box-shadow: -2px 2px 20px black;
+      transition: $trans-1s;
 
       > img {
         height: 50px;
+      }
+
+      &Scroll {
+        background-color: $color-blue;
+        border: 1px solid $color-blue;
+
+        > img {
+          filter: invert(100%);
+        }
       }
     }
   }

@@ -94,8 +94,8 @@ a {
 
 .header {
   position: fixed;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: transparent;
   z-index: 10;
   width: 100%;
@@ -107,15 +107,15 @@ a {
   margin-right: 50px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header__logo > h2 {
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-size: 1.125rem;
 }
 
@@ -346,7 +346,7 @@ h1 {
 
 .footer {
   background-color: #0c4c8a;
-  padding: 120px 300px 120px 120px;
+  padding: 120px 300px 50px 120px;
 }
 
 .footer__datos {
@@ -365,8 +365,8 @@ h1 {
 
 .footer__linksWhatsapp {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 30px;
+  bottom: 30px;
   background-color: white;
   border: 1px solid white;
   border-radius: 50%;
@@ -374,10 +374,22 @@ h1 {
   width: 80px;
   -webkit-box-shadow: -2px 2px 20px black;
           box-shadow: -2px 2px 20px black;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .footer__linksWhatsapp > img {
   height: 50px;
+}
+
+.footer__linksWhatsappScroll {
+  background-color: #0c4c8a;
+  border: 1px solid #0c4c8a;
+}
+
+.footer__linksWhatsappScroll > img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .breakLine {
