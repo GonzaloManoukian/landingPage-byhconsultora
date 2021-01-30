@@ -308,7 +308,7 @@ h1 {
   position: relative;
   top: 0;
   left: 0;
-  background-image: url(img/autoproteccion.jpg);
+  background-image: url(../img/autoproteccion.jpg);
   background-size: cover;
   background-position: left top;
   min-height: 100vh;
@@ -318,7 +318,7 @@ h1 {
   position: relative;
   top: 0;
   left: 0;
-  background-image: url(img/bioseguridad.jpg);
+  background-image: url(../img/bioseguridad.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -328,7 +328,7 @@ h1 {
   position: relative;
   top: 0;
   left: 0;
-  background-image: url(img/capacitaciones.jpg);
+  background-image: url(../img/capacitaciones.jpg);
   background-size: cover;
   background-position: left top;
   min-height: 100vh;
@@ -338,7 +338,7 @@ h1 {
   position: relative;
   top: 0;
   left: 0;
-  background-image: url(img/otrosServicios.jpg);
+  background-image: url(../img/otrosServicios.jpg);
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -346,7 +346,7 @@ h1 {
 
 .footer {
   background-color: #0c4c8a;
-  padding: 120px 300px 50px 120px;
+  padding: 60px 300px 50px 120px;
 }
 
 .footer__datos {
