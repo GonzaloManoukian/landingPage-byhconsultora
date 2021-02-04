@@ -1,0 +1,64 @@
+.contacto {
+  padding-top: 100px;
+  margin-bottom: 150px;
+
+  @include breakpoint-down(medium) {
+    padding-top: 50px;
+  }
+
+  > h2 {
+    font-size: $font-xxxl;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__formulario {
+    max-width: 900px;
+    margin: 0 auto;
+
+    @include breakpoint-down(medium) {
+      padding-right: 7vw;
+      padding-left: 7vw;
+    }
+
+    &Contenido {
+      > input:not([type="submit"]) {
+        font-family: inherit;
+        font-size: $font-md;
+        width: 100%;
+        min-height: 2.4rem;
+        border: 1px solid $color-blue;
+        border-radius: 5px;
+        padding: 5px;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      > input[type="submit"] {
+        font-size: $font-xxl;
+        margin-top: 30px;
+        padding: 0 20px;
+
+        @include breakpoint-down(medium) {
+          font-size: $font-lg;
+          margin-top: 15px;
+          padding-top: 0 10px;
+        }
+      }
+
+      > textarea {
+        font-family: inherit;
+        font-size: $font-md;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 4.8rem;
+        border: 1px solid $color-blue;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -4,11 +4,11 @@
   margin: 0 auto;
 
   > h2 {
-    font-size: $font-32;
+    font-size: $font-xxxl;
     margin-bottom: 9vh;
   }
   &__row {
-    min-width: 1200px;
+    // min-width: 1200px;
     max-width: 1500px;
     margin: 0 20px;
     &Card {
@@ -16,7 +16,7 @@
       width: 32%;
       //   min-height: 500px;
       padding: 40px 50px 60px;
-      > button {
+      > a {
         position: absolute;
         bottom: -32.5px;
         width: 250px;
@@ -27,5 +27,50 @@
         }
       }
     }
+  }
+}
+
+.planes-mobile {
+  text-align: center;
+  padding: 10vh 7vw;
+  margin: 0 auto;
+  > h2 {
+    margin-bottom: 9vh;
+  }
+
+  &__Card {
+    position: relative;
+    width: 65vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+
+    > a {
+      position: absolute;
+      bottom: -32.5px;
+      min-width: 170px;
+    }
+
+    &Contenido {
+      padding-top: 3vh;
+      padding-bottom: 3vh;
+    }
+  }
+
+  &__accordBoton {
+    &Active {
+    }
+  }
+
+  &__accordContenido {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+  }
+
+  &__span {
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: block;
+    margin: 0 auto;
   }
 }

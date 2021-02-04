@@ -32,20 +32,89 @@
 
   &Scroll {
     background-color: $color-blue;
+    @include breakpoint-down(medium) {
+      background-color: transparent;
+    }
   }
   &__nav {
     margin-right: 40px;
     width: 650px;
     height: 90px;
+    @include breakpoint-down(large) {
+      width: 500px;
+    }
     > a {
       text-transform: uppercase;
       font-size: $font-lg;
+      transition: $trans-1s;
     }
 
     &Scroll {
       > a {
         color: white;
       }
+    }
+  }
+}
+
+.header__hamburger {
+  position: fixed;
+  background-color: transparent;
+  top: 10px;
+  right: 5px;
+  padding: 15px;
+  outline: none;
+  z-index: 10;
+
+  > span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: $color-gray;
+    transition: all 300ms ease-in-out;
+    transform-origin: 1.5px 1.5px;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &.open {
+    > span:first-child {
+      transform: rotate(45deg);
+    }
+
+    > span:nth-child(2) {
+      opacity: 0;
+    }
+
+    > span:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.header__navMobile {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  background-image: url(../img/heromobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  transition: all 300ms ease-in-out;
+
+  &Open {
+    right: 0;
+  }
+
+  &Content {
+    margin-top: 15vh;
+    margin-left: 18vw;
+    height: 45vh;
+    > a {
+      text-transform: uppercase;
+      font-size: $font-xl;
     }
   }
 }

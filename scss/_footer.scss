@@ -1,6 +1,10 @@
 .footer {
   background-color: $color-blue;
-  padding: 60px 300px 50px 120px;
+  padding: 60px 30vh 50px 10vh;
+
+  @include breakpoint-down(medium) {
+    padding: 10vh 12vw;
+  }
   &__datos {
     color: white;
     line-height: 20px;
@@ -11,6 +15,14 @@
     &Redes {
       a {
         height: 50px;
+
+        @include breakpoint-down(medium) {
+          margin-top: 7vh;
+          > img {
+            height: 40px;
+          }
+        }
+
         &:not(:last-child) {
           margin-right: 20px;
         }
@@ -28,9 +40,18 @@
       width: 80px;
       box-shadow: -2px 2px 20px black;
       transition: $trans-1s;
+      @include breakpoint-down(medium) {
+        right: 20px;
+        bottom: 20px;
+        height: 70px;
+        width: 70px;
+      }
 
       > img {
         height: 50px;
+        @include breakpoint-down(medium) {
+          height: 45px;
+        }
       }
 
       &Scroll {

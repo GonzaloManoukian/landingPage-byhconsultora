@@ -17,18 +17,37 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
     <header class="header flex flex-jc-sb flex-ai-c">
-      <a href="#" class="header__logo flex flex-ai-c flex-jc-sb">
+      <a href="#" class="header__logo flex flex-ai-c flex-jc-sb hide-for-mobile">
         <img src="img/isotipo-blanco.png" alt="BYH CONSULTORA" />
         <h2>BYH CONSULTORA</h2>
       </a>
-      <div class="header__nav flex flex-jc-sb flex-ai-c">
+      <div class="header__nav hide-for-mobile flex flex-jc-sb flex-ai-c">
         <a href="#">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#trabajos">Trabajo</a>
         <a href="#contacto">Contacto</a>
       </div>
+
+      <a href="#" class="header__hamburger hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div class="header__navMobile hide-for-desktop">
+        <div class="header__navMobileContent flex flex-c flex-jc-sb">
+        <a href="#">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#planesMobile">Trabajo</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      </div>
+      
     </header>
+
+
 
     <section class="hero flex flex-c flex-jc-c flex-ai-c">
       <div class="hero__logo flex flex-c flex-jc-c flex-ai-c">
@@ -39,7 +58,7 @@
         Somos una consultora de Buenos Aires que asesora a empresas sobre las normativas vigentes de Higiene y Seguridad que se deben cumplir en
         Argentina.
       </p>
-      <button class="botonCTA">Contacto</button>
+      <a href="#contacto" class="botonCTA flex flex-jc-c flex-ai-c">Contacto</a>
     </section>
 
     <main>
@@ -51,9 +70,9 @@
           laboral, bioseguridad, asesoría técnica en Higiene y Seguridad, manteniendo el cuidado del medio ambiente.
         </p>
         <div class="about__rowBotones flex flex-jc-sb flex-ai-c">
-          <button class="botonCTA">PREVENCIÓN</button>
-          <button class="botonCTA">PLANES</button>
-          <button class="botonCTA">SIMULACIONES</button>
+          <a href="#servicios" class="botonCTA flex flex-jc-c flex-ai-c">PREVENCIÓN</a>
+          <a href="#planes" class="botonCTA flex flex-jc-c flex-ai-c">PLANES</a>
+          <a href="#trabajos" class="botonCTA flex flex-jc-c flex-ai-c">SIMULACIONES</a>
         </div>
       </section>
 
@@ -61,59 +80,66 @@
         <h2>SERVICIOS QUE OFRECEMOS</h2>
         <div class="servicios__row flex flex-jc-sb flex-ai-c">
           <div class="card servicios__rowCard">
-            <div class="servicios__rowCard_contenido flex flex-c flex-ai-c">
-              <i><img src="img/trianguloGris.png" alt="" /></i>
-              <h3>INSTITUCIONES EDUCATIVAS</h3>
-              <p>Prevención de incendios. Como utilizar un extinguidor.</p>
-              <span></span>
-              <p>COMITÉ DE AUTOPROTECCIÓN según Ley 5920/17. DGDCIV</p>
-              <span></span>
-              <p>Estudio y control de Iluminación, Res. 84/12</p>
-              <span></span>
-              <p>Nivel Sonoro - Medición en Ambiente Laboral. Res. 85/12</p>
-              <span></span>
-              <p>Certificado de escuelas seguras</p>
+            <div class="servicios__rowCard_principal flex flex-c flex-ai-c">
+              <i class="selector"><img src="img/trianguloGris.png" alt="" /></i>
+              <h3 id="selector">INSTITUCIONES<br>EDUCATIVAS</h3>
+              <div class="servicios__rowCard_principalContenido">
+              <h4 class="pCard">Prevención de incendios. Como utilizar un extinguidor.</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">COMITÉ DE AUTOPROTECCIÓN según Ley 5920/17. DGDCIV</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Estudio y control de Iluminación, Res. 84/12</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Nivel Sonoro - Medición en Ambiente Laboral. Res. 85/12</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Certificado de escuelas seguras</h4>
+            </div>
             </div>
           </div>
 
           <div class="card cardBlue servicios__rowCard">
-            <div class="servicios__rowCard_contenido flex flex-c flex-ai-c">
+            <div class="servicios__rowCard_principal flex flex-c flex-ai-c">
               <i><img src="img/trianguloBlanco.png" alt="" /></i>
-              <h3>PREVENCION EN EMPRESAS</h3>
-              <p>Estudios Ergonómicos de los puestos de trabajo. Res. 886/2015</p>
-              <span></span>
-              <p>Estudio de carga de Fuego.</p>
-              <span></span>
-              <p>PLAN DE AUTOPROTECCIÓN Y EVACUACIÓN DE LAS PERSONAS. Ley 5920/17</p>
-              <span></span>
-              <p>PLANES DE EVACUACION Y SIMULACROS</p>
-              <span></span>
-              <p>SIMULACIÓN Y AN DIGITAL DE EVACUACIÓN</p>
+              <h3>PREVENCION<br>EN EMPRESAS</h3>
+              <div class="servicios__rowCard_principalContenido">
+              <h4 class="pCard">Estudios Ergonómicos de los puestos de trabajo. Res. 886/2015</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Estudio de carga de Fuego.</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">PLAN DE AUTOPROTECCIÓN Y EVACUACIÓN DE LAS PERSONAS. Ley 5920/17</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">PLANES DE EVACUACION Y SIMULACROS</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">SIMULACIÓN Y AN DIGITAL DE EVACUACIÓN</h4>
+            </div>
             </div>
           </div>
 
           <div class="card servicios__rowCard">
-            <div class="servicios__rowCard_contenido flex flex-c flex-ai-c">
+            <div class="servicios__rowCard_principal flex flex-c flex-ai-c">
               <i><img src="img/trianguloGris.png" alt="" /></i>
-              <h3>INSTITUCIONES EDUCATIVAS</h3>
-              <p>Prevención de incendios. Como utilizar un extinguidor.</p>
-              <span></span>
-              <p>COMITÉ DE AUTOPROTECCIÓN según Ley 5920/17. DGDCIV</p>
-              <span></span>
-              <p>Estudio y control de Iluminación, Res. 84/12</p>
-              <span></span>
-              <p>Nivel Sonoro - Medición en Ambiente Laboral. Res. 85/12</p>
-              <span></span>
-              <p>Certificado de escuelas seguras</p>
+              <h3 id="servicios__cardTitle">COMERCIOS, LOCALES 
+                Y ESTABLECIMIENTOS</h3>
+              <div class="servicios__rowCard_principalContenido">
+              <h4 class="pCard">Bromatología -Capacitaciones para gastronomía. CAA Código Alimentario Argentino.</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Ley 18284- Bromatología-  Manipulación de Alimentos.</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Prevención de riesgos laborales y Accidentes de trabajo</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">Protocolo de bioSeguridad, en tiempos de pandemia.</h4>
+              <span class="spanCard"></span>
+              <h4 class="pCard">PLAN DE AUTOPROTECCIÓN Y EVACUACIÓN DE LAS PERSONAS.</h4>
+            </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="planes" class="planes flex flex-c flex-jc-c flex-ai-c">
+      <section id="planes" class="hide-for-mobile planes flex flex-c flex-jc-c flex-ai-c">
         <h2>PLANES Y CERTIFICACIONES</h2>
 
-        <div class="planes__row flex flex-jc-sb">
+        <div class="planes__row flex-desktop flex-jc-sb">
           <div class="cardTransp planes__rowCard flex flex-c flex-ai-c">
             <div class="planes__rowCard_contenido flex flex-c flex-jc-c flex-ai-c">
               <h3>SISTEMAS DE AUTOPROTECCIÓN</h3>
@@ -123,7 +149,7 @@
                 Registro de Profesionales para la elaboración y puesta a prueba de los Sistemas de Autoprotección.
               </p>
             </div>
-            <button class="botonCTA">consulta</button>
+            <a href="#contacto" class="botonCTA flex flex-jc-c flex-ai-c">consulta</a>
           </div>
 
           <div class="cardTransp planes__rowCard flex flex-c flex-ai-c">
@@ -135,7 +161,7 @@
                 Decreto538/2009 Reglamentario de la Ley 2189
               </p>
             </div>
-            <button class="botonCTA">consulta</button>
+            <a href="#contacto" class="botonCTA flex flex-jc-c flex-ai-c">consulta</a>
           </div>
 
           <div class="cardTransp planes__rowCard flex flex-c flex-ai-c">
@@ -147,12 +173,57 @@
                 Ministerio de Trabajo, Salud.
               </p>
             </div>
-            <button class="botonCTA">consulta</button>
+            <a href="#contacto" class="botonCTA flex flex-jc-c flex-ai-c">consulta</a>
           </div>
         </div>
       </section>
 
-      <section id="trabajos" class="trabajos">
+
+<!-- PLANES Y CERTIFICACIONES MOBILE -->
+
+      <section id="planesMobile" class="hide-for-desktop planes-mobile flex flex-c flex-jc-c flex-ai-c">
+        <h2>PLANES Y CERTIFICACIONES</h2>
+
+          <div class="cardTransp planes-mobile__Card flex flex-c flex-ai-c">
+
+            <div class="planes-mobile__CardContenido flex flex-c flex-jc-c flex-ai-c">
+              <div class="planes-mobile__accordBoton"><h3>SISTEMAS DE AUTOPROTECCIÓN</h3></div>
+              <div class="planes-mobile__accordContenido">
+                <p>
+                Mediante el Decreto 51/18, el Jefe de Gobierno Porteño reglamentó la nueva Ley N° 5.920 Sistema de Autoprotección, y nombró como
+                autoridad de aplicación a la Dirección General de Defensa Civil, perteneciente a la Subsecretaría de Emergencias. Además, se crea un
+                Registro de Profesionales para la elaboración y puesta a prueba de los Sistemas de Autoprotección.
+              </p>
+            </div>
+            </div>
+            <span class="planes-mobile__span"></span>
+            <div class="planes-mobile__CardContenido flex flex-c flex-jc-c flex-ai-c">
+              <div class="planes-mobile__accordBoton"><h3>CERTIFICADO DE ESCUELAS SEGURAS</h3></div>
+              <div class="planes-mobile__accordContenido">
+                <p>
+                El programa tiene por objeto promover en los establecimientos educativos la actualización de los estándares de infraestructura,
+                habitabilidad y seguridad, de modo que se adecúen progresivamente al régimen de escuelas seguras. •Ley 2189 de Escuelas Seguras .
+                Decreto538/2009 Reglamentario de la Ley 2189
+              </p>
+            </div>
+            </div>
+            <span class="planes-mobile__span"></span>
+            <div class="planes-mobile__CardContenido flex flex-c flex-jc-c flex-ai-c">
+              <div class="planes-mobile__accordBoton"><h3>PROTOCOLOS DE HIGIENE Y SEGURIDAD</h3></div>
+              <div class="planes-mobile__accordContenido">
+              <p>
+                En el marco de la declaración de emergencia pública en materia sanitaria, y teniendo en cuenta las resoluciones regulatorias en el
+                ámbito laboral dictadas por el Ministerio de Trabajo de la Nación y por la Superintendencia de Riesgos del Trabajo de la Nación, el
+                Ministerio de Trabajo, Salud.
+              </p>
+            </div>
+            </div>
+            <a href="#contacto" class="botonCTA flex flex-jc-c flex-ai-c">consulta</a>
+          </div>
+
+      </section>
+
+      <section id="trabajos" class="trabajos hide-for-mobile">
 
 <!-- IMAGEN DERECHA  -->
 
@@ -315,16 +386,26 @@
     </main>
 
     <section id="contacto" class="contacto">
-<br>
-<br>
-<p> --- FORMULARIO ---</p>
-<br>
-<br>
+      <h2>CONTACTO</h2>
+      <div class="contacto__formulario">
+      <form method="post" action="">
+        <div class="contacto__formularioContenido flex flex-c flex-ai-c flex-jc-c">
+        <input type="text" class="" name="nombre"
+              placeholder="Nombre">
+              <input type="email" class="" name="email"
+              placeholder="Email" required>
+              <textarea name="consulta" placeholder="Consulta"
+              class=""></textarea>
+              <input type="submit" class="botonCTA"
+              value="Solicitar Presupuesto">
+            </div>
+            </form>
+          </div>
     </section>
 
-    <footer class="footer flex flex-jc-sb">
+    <footer class="footer flex-desktop flex-jc-sb">
       <div class="footer__datos">
-        <p>Tel: 45624969 / 1554148082 </p>
+        <p>Tel: 45624969 / 1554148082</p>
         <p>lblatapie@yahoo.com.ar</p>
         <p class="breakLine">Isabel la Católica 381</p>
         <p>Barracas, Buenos Aires</p>
@@ -336,7 +417,7 @@
           <a href="#"><img src="assets/icons/linkedin.png" alt=""></a>
           <a href="#"><img src="assets/icons/youtube.png" alt=""></a>
         </div>
-        <a href="#" class="footer__linksWhatsapp footer__linksWhatsappScroll flex flex-ai-c flex-jc-c"><img src="assets/icons/whatsapp.png" alt=""></a>
+        <a href="https://wa.link/56bo24" class="footer__linksWhatsapp footer__linksWhatsappScroll flex flex-ai-c flex-jc-c"><img src="assets/icons/whatsapp.png" alt=""></a>
       </div>
 
     </footer>

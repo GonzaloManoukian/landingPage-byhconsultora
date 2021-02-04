@@ -17,6 +17,10 @@ body {
   line-height: 1.4;
   margin: 0;
   padding: 0;
+
+  @include breakpoint-down(medium) {
+    font-size: $font-sm;
+  }
 }
 
 a {
@@ -27,8 +31,20 @@ a {
 .flex {
   display: flex;
 
+  &-desktop {
+    @include breakpoint-up(large) {
+      display: flex;
+    }
+  }
+
   &-c {
     flex-direction: column;
+  }
+
+  &-c-mobile {
+    @include breakpoint-up(large) {
+      flex-direction: column;
+    }
   }
 
   &-jc-c {
@@ -45,17 +61,26 @@ a {
 }
 
 .botonCTA {
+  // display: block;
   font-family: inherit;
-  font-size: 1.875rem;
+  font-size: $font-xxl;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  height: 65px;
-  width: 340px;
+  min-height: 55px;
+  min-width: 300px;
+  padding: 0 10px;
   background-color: $color-blue;
   border: 1px solid $color-blue;
   border-radius: 50px;
   cursor: pointer;
+  outline: 0;
+
+  @include breakpoint-down(medium) {
+    font-size: $font-xl;
+    min-height: 50px;
+    min-width: 220px;
+  }
 }
 
 .card {
@@ -74,5 +99,17 @@ a {
     border: 2px solid $color-blue;
     box-shadow: none;
     border-radius: 25px;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
   }
 }

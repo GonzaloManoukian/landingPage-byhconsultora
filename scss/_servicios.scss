@@ -9,33 +9,52 @@
   padding: 18vh 0;
   margin: 0 auto;
 
+  @include breakpoint-down(medium) {
+    padding: 15vh 7vw;
+  }
+
   > h2 {
-    font-size: $font-32;
+    font-size: $font-xxxl;
     margin-bottom: 9vh;
   }
   &__row {
-    min-width: 1200px;
     max-width: 1500px;
     margin: 0 20px;
 
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+
     &Card {
       width: 31%;
-      height: 750px;
+      min-height: 750px;
+
+      @include breakpoint-down(medium) {
+        position: relative;
+        width: 65vw;
+        min-height: 120px;
+
+        &:not(:first-child) {
+          margin-top: 7vh;
+        }
+      }
 
       &:hover {
         box-shadow: 0px 0px 30px rgba(black, 0.5);
       }
 
-      &_contenido {
+      &_principal {
         margin: 40px 50px 60px;
 
         > i {
           padding: 0;
           margin: 1vh 0;
+          pointer-events: none;
         }
 
         > h3 {
           font-weight: 400;
+          pointer-events: none;
         }
 
         > span {
@@ -44,11 +63,57 @@
         }
         > p {
           padding-top: 1vh;
+          font-size: inherit;
+          font-weight: inherit;
           &:not(:last-child) {
             padding-bottom: 1vh;
           }
         }
+
+        > h4 {
+          padding-top: 1vh;
+          font-size: inherit;
+          font-weight: 300;
+          &:not(:last-child) {
+            padding-bottom: 1vh;
+          }
+        }
+
+        &Contenido {
+          @include breakpoint-down(medium) {
+            max-height: 0px;
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.4s ease-in-out;
+          }
+        }
       }
     }
+  }
+}
+
+.spanCard {
+  width: 50%;
+  border-bottom: 1px solid lightgray;
+  display: block;
+  margin: 0 auto;
+}
+.pCard {
+  padding-top: 1vh;
+  padding: inherit;
+  font-size: inherit;
+  font-weight: 300;
+  &:not(:last-child) {
+    padding-bottom: 1vh;
+  }
+}
+
+.contenidoOpen {
+  @include breakpoint-down(medium) {
+    // visibility: visible;
+    opacity: 1;
+    max-height: 200vh;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
   }
 }

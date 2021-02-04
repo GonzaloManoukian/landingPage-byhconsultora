@@ -1,5 +1,8 @@
 h1 {
-  font-size: $font-32;
+  font-size: $font-xxxl;
+  @include breakpoint-down(medium) {
+    font-size: $font-xxl;
+  }
 }
 
 .about {
@@ -9,8 +12,27 @@ h1 {
   max-width: 1100px;
   margin: 0 auto;
 
+  @include breakpoint-down(medium) {
+    padding: 15vh 7vw;
+  }
+
   > p {
     margin: 7.5% 0;
     font-size: $font-lg;
+
+    @include breakpoint-down(medium) {
+      margin: 7vh 0;
+    }
+  }
+
+  &__rowBotones {
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      .botonCTA {
+        &:not(:first-child) {
+          margin-top: 5vh;
+        }
+      }
+    }
   }
 }

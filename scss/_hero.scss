@@ -6,14 +6,26 @@
   background-size: cover;
   background-position: center top;
   height: 100vh;
+
+  @include breakpoint-down(medium) {
+    background-image: url(../img/heromobile.jpg);
+    background-position: center center;
+  }
+
   &__logo {
     > img {
       height: 25vh;
+      @include breakpoint-down(medium) {
+        height: 20vh;
+      }
     }
     > h2 {
       font-weight: 400;
       font-size: $font-44;
       margin: 3.7vh 0;
+      @include breakpoint-down(medium) {
+        font-size: $font-xxl;
+      }
     }
   }
 
@@ -21,7 +33,12 @@
     font-size: $font-xl;
     text-align: center;
     margin: 0 20%;
-    text-shadow: 0px 0px 10px rgba(black, 0.3);
+    text-shadow: 0px 0px 10px rgba(black, 0.2);
+
+    @include breakpoint-down(medium) {
+      font-size: $font-lg;
+      margin: 0 7vw;
+    }
   }
 
   > .botonCTA {
