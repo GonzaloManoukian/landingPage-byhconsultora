@@ -416,7 +416,13 @@ h1 {
 
 .servicios__rowCard {
   width: 31%;
-  min-height: 750px;
+  min-height: 780px;
+}
+
+@media (max-width: (87, 4375em)) {
+  .servicios__rowCard {
+    min-height: 1000px;
+  }
 }
 
 @media (max-width: 63.9375em) {

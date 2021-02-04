@@ -27,7 +27,11 @@
 
     &Card {
       width: 31%;
-      min-height: 750px;
+      min-height: 780px;
+
+      @include breakpoint-down(large) {
+        min-height: 1000px;
+      }
 
       @include breakpoint-down(medium) {
         position: relative;
